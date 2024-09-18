@@ -1,13 +1,16 @@
 'use client'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { QueryClientProvider } from '@tanstack/react-query'
+import { getQueryClient } from './get-query-client'
+import React from 'react'
 
 interface IProps {
     children: React.ReactNode
 }
 
-const queryClient = new QueryClient()
 
 const Providers: React.FC<IProps> = ({ children }) => {
+    const queryClient = getQueryClient()
+
     return (
         <QueryClientProvider client={queryClient}>
             {children}
