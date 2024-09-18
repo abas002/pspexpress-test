@@ -33,7 +33,7 @@ const Header = () => {
                     </ul>
                     {role
                         ? <button onClick={onClickLogoutBtn} className='px-4 py-2 rounded-md text-red-600'>Logout</button>
-                        : <Link href="/login" className="text-gray-700 border-b hover:bg-gray-50 px-2 py-1">Login Page</Link>
+                        : <Link href="/login" className="text-gray-700 border-b hover:bg-gray-50 px-2 py-1">Login</Link>
                     }
                 </div>
             </nav>
